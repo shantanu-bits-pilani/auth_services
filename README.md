@@ -1,9 +1,17 @@
 # Auth Service
 
 ## Description
-The Auth Service handles user authentication and authorization.
+The Auth Service handles user authentication and authorization. It provides endpoints for user registration, login, and user management.
+
+## Dependencies
+- Flask=2.1.1
+- Werkzeug=2.1.1
+- pymongo=4.0.1
 
 ## Endpoints
+- `POST /register`: Register a new user.
+- `POST /login`: Authenticate a user and return a token.
+- `GET /users`: Retrieve a list of all users.
 
 ### Register
 - **URL:** `/register`
@@ -30,6 +38,10 @@ The Auth Service handles user authentication and authorization.
 - **Response:**
     - 200 OK if the login is successful.
     - 401 Unauthorized if the credentials are invalid.
+
+## Environment Variables
+- `MONGO_URI`: MongoDB connection string.
+
 
 ## Running the Service
     To run the service, use Docker Compose:
